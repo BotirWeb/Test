@@ -332,7 +332,53 @@ window.TEST_SAVOLLAR = [
   { fan: "Milliy qonunchilik", savol: "Yashash huquqi har bir insonning qanday huquqi hisoblanadi?",
     variantlar: ["Shartli huquqi", "Ajralmas huquqi", "Cheklangan huquqi", "Vaqtinchalik huquqi"], togri: 1, izoh: "" },
   { fan: "Milliy qonunchilik", savol: "O'zbekiston Respublikasi fuqaroligiga va siyosiy boshpana berishga oid masalalarni kim hal etadi?",
-    variantlar: ["Oliy Majlis", "Prezident", "Vazirlar Mahkamasi", "Ichki ishlar vazirligi"], togri: 1, izoh: "" }
+    variantlar: ["Oliy Majlis", "Prezident", "Vazirlar Mahkamasi", "Ichki ishlar vazirligi"], togri: 1, izoh: "" },
+
+  /* ================= KASBIY KO'NIKMALAR =================
+     Vakansiya talablari asosida: MS Office va IT bo'yicha mustaqil foydalanuvchi,
+     rasmiy hujjat yuritish, elektron xavfsizlik. Faqat umumiy, tekshirilgan bilimlar. */
+  { fan: "Kasbiy ko'nikmalar", savol: "Excelda A1:A5 kataklardagi sonlar yig'indisini hisoblash formulasi qaysi?",
+    variantlar: ["=A1:A5", "=SUM(A1:A5)", "=TOTAL(A1;A5)", "=COUNT(A1:A5)"], togri: 1, izoh: "SUM — yig'indi, COUNT — sonli kataklar soni." },
+  { fan: "Kasbiy ko'nikmalar", savol: "Excelda diapazondagi sonlarning o'rtacha qiymatini topish uchun qaysi funksiya ishlatiladi?",
+    variantlar: ["AVERAGE", "MIN", "MAX", "COUNT"], togri: 0, izoh: "AVERAGE — o'rtacha arifmetik qiymat." },
+  { fan: "Kasbiy ko'nikmalar", savol: "Excelda formulani nusxalaganda katak manzili o'zgarmasligi uchun (absolyut havola) manzil qanday yoziladi?",
+    variantlar: ["A1!", "$A$1", "#A#1", "A1"], togri: 1, izoh: "$ belgisi ustun va qatorni qotiradi; klaviaturada F4 tugmasi bilan ham qo'yiladi." },
+  { fan: "Kasbiy ko'nikmalar", savol: "Excelda =IF(B2>=60;\"O'tdi\";\"O'tmadi\") formulasi B2 katakda 45 bo'lsa nima qaytaradi?",
+    variantlar: ["O'tdi", "45", "O'tmadi", "Xato"], togri: 2, izoh: "45 >= 60 shart bajarilmaydi, shuning uchun ikkinchi qiymat qaytariladi." },
+  { fan: "Kasbiy ko'nikmalar", savol: "Excelda 20 ta kataklardan nechtasi son kiritilganini hisoblash uchun qaysi funksiya mos?",
+    variantlar: ["AVERAGE", "IF", "SUM", "COUNT"], togri: 3, izoh: "COUNT faqat sonli qiymat kiritilgan kataklarni sanaydi." },
+  { fan: "Kasbiy ko'nikmalar", savol: "Microsoft Wordda hujjatdagi barcha matnni belgilash uchun qaysi tugmalar birikmasi ishlatiladi?",
+    variantlar: ["Ctrl + S", "Ctrl + A", "Ctrl + P", "Ctrl + B"], togri: 1, izoh: "Ctrl+A — hammasini belgilash." },
+  { fan: "Kasbiy ko'nikmalar", savol: "Wordda so'zni topib, boshqasiga almashtirish oynasi qaysi tugmalar birikmasi bilan ochiladi?",
+    variantlar: ["Ctrl + K", "Ctrl + N", "Ctrl + H", "Ctrl + U"], togri: 2, izoh: "Ctrl+H — Almashtirish (Replace); Ctrl+F — qidirish." },
+  { fan: "Kasbiy ko'nikmalar", savol: "Wordda yaratilgan hujjatni PDF shaklida saqlash uchun nima qilinadi?",
+    variantlar: ["Fayl → Yopish", "Faylning nomini .pdf qilib o'zgartirish", "Hujjatni elektron pochtaga yuborish", "Fayl → Saqlash (Save as) yoki Eksport → PDF turini tanlash"], togri: 3, izoh: "Saqlash turi sifatida PDF tanlanadi." },
+  { fan: "Kasbiy ko'nikmalar", savol: "Wordda hujjatning bir nechta betida bir xil yuqori kolontitul (sarlavha) qo'yish uchun qaysi bo'limdan foydalaniladi?",
+    variantlar: ["Qo'shish (Insert) → Yuqori kolontitul (Header)", "Ko'rinish (View) → Zoom", "Maket (Layout) → Qirqish", "Fayl → Chop etish"], togri: 0, izoh: "Header/Footer Insert bo'limida joylashgan." },
+  { fan: "Kasbiy ko'nikmalar", savol: "Wordda yozilgan matnda imlo xatolarini tekshirish uchun qaysi tugma ishlatiladi?",
+    variantlar: ["F12", "F5", "F7", "F1"], togri: 2, izoh: "F7 — imlo va grammatikani tekshirish; F1 — yordam." },
+  { fan: "Kasbiy ko'nikmalar", savol: "PowerPointda taqdimotni birinchi slayddan boshlab namoyish qilish uchun qaysi tugma bosiladi?",
+    variantlar: ["Ctrl + F5", "F5", "Esc", "F7"], togri: 1, izoh: "F5 — boshidan; Shift+F5 — joriy slayddan; Esc — namoyishdan chiqish." },
+  { fan: "Kasbiy ko'nikmalar", savol: "Taqdimot slaydida matnni ko'p yozishdan ko'ra qaysi usul yaxshiroq hisoblanadi?",
+    variantlar: ["Butun matnni kichik shriftda joylash", "Slaydlar sonini oshirish", "Qisqa tezislar, grafik va diagrammalar", "Faqat rangli fon qo'yish"], togri: 2, izoh: "Slayd tinglovchiga fikrni yetkazishga yordam berishi kerak, o'qib berilishi uchun emas." },
+  { fan: "Kasbiy ko'nikmalar", savol: "Windowsda oxirgi bajarilgan amalni bekor qilish uchun qaysi tugmalar birikmasi ishlatiladi?",
+    variantlar: ["Alt + F4", "Ctrl + Y", "Ctrl + X", "Ctrl + Z"], togri: 3, izoh: "Ctrl+Z — bekor qilish; Ctrl+Y — qaytarish." },
+  { fan: "Kasbiy ko'nikmalar", savol: "Elektron pochta orqali noma'lum jo'natuvchidan \"hisobingiz bloklandi, havolani bosing\" degan xat keldi. Nima qilish kerak?",
+    variantlar: ["Havolani bosmaslik, xatni shubhali deb belgilash va rasmiy sayt orqali tekshirish", "Xatni barcha tanishlarga yuborish", "Havolani bosib, parolni kiritish", "Xatga javob yozib, shaxsiy ma'lumotlarni yuborish"], togri: 0, izoh: "Bu fishing (phishing) belgilari: shoshiltirish va havola orqali parol so'rash." },
+  { fan: "Kasbiy ko'nikmalar", savol: "Qaysi parol eng xavfsiz hisoblanadi?",
+    variantlar: ["Katta-kichik harf, raqam va belgilar aralash, uzun parol", "Ismingiz", "12345678", "tug'ilgan yilingiz"], togri: 0, izoh: "Uzun va murakkab, boshqa joyda ishlatilmagan parol xavfsizroq." },
+  { fan: "Kasbiy ko'nikmalar", savol: "Ikki bosqichli autentifikatsiya (2FA) nima beradi?",
+    variantlar: ["Internetni tezlashtiradi", "Hisobga kirishda paroldan tashqari qo'shimcha tasdiq talab qiladi", "Fayllarni siqadi", "Parolni avtomatik o'zgartiradi"], togri: 1, izoh: "Parol o'g'irlansa ham hisobga kirish qiyinlashadi." },
+  { fan: "Kasbiy ko'nikmalar", savol: "Rasmiy yozishmada shaxsning rahbarga qaratilgan iltimosini bildiruvchi hujjat qaysi?",
+    variantlar: ["Buyruq", "Dalolatnoma", "Ariza", "Bayonnoma"], togri: 2, izoh: "Ariza — shaxs tomonidan iltimos bilan yo'llanadigan hujjat." },
+  { fan: "Kasbiy ko'nikmalar", savol: "Yig'ilish yoki majlisning borishi va qabul qilingan qarorlari qaysi hujjatda qayd etiladi?",
+    variantlar: ["Ishonchnoma", "Ariza", "Ma'lumotnoma", "Bayonnoma"], togri: 3, izoh: "Bayonnoma — majlis va yig'ilishlarni rasmiylashtiruvchi hujjat." },
+  { fan: "Kasbiy ko'nikmalar", savol: "Sodir bo'lgan holat sabablarini izohlab, rahbarga yoziladigan hujjat qaysi?",
+    variantlar: ["Tushuntirish xati", "Shartnoma", "Taklifnoma", "Buyruq"], togri: 0, izoh: "Tushuntirish xatida holatning sabablari bayon etiladi." },
+  { fan: "Kasbiy ko'nikmalar", savol: "Komissiya tomonidan aniqlangan faktni (masalan, mol-mulkni qabul qilish yoki ko'rik natijasini) tasdiqlovchi hujjat qaysi?",
+    variantlar: ["Tavsifnoma", "Taklifnoma", "Dalolatnoma", "Ariza"], togri: 2, izoh: "Dalolatnoma bir necha shaxs imzosi bilan tasdiqlanadi." },
+  { fan: "Kasbiy ko'nikmalar", savol: "Rasmiy yozishmada murojaatga javob berishning to'g'ri uslubi qaysi?",
+    variantlar: ["Faqat og'zaki", "Qisqa, aniq, rasmiy iboralar bilan, so'zlashuv iboralarisiz", "Ramz va emojilar bilan", "Hissiyotli va ko'p so'zli"], togri: 1, izoh: "Rasmiy uslub: aniqlik, ixchamlik, neytral ohang." }
 ];
 
 
@@ -477,7 +523,7 @@ window.SUHBAT_SAVOLLAR = [
 window.TEST_SOZLAMALAR = {
   testNomi: "Ishga kirish testi",
   // Imtihonda fanlar SHU tartibda ketma-ket keladi:
-  fanlar: ["Davlat tili", "Milliy qonunchilik", "IKT", "Mantiqiy fikrlash"],
+  fanlar: ["Davlat tili", "Milliy qonunchilik", "IKT", "Mantiqiy fikrlash", "Kasbiy ko'nikmalar"],
   savollarPerFan: 10,          // to'liq imtihonda har fandan nechta savol
   otishBali: 60,               // o'tish chegarasi (foizda)
   savollarniAralashtirish: true,

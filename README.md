@@ -20,6 +20,8 @@ Haqiqiy imtihondagidek ishlaydigan, serversiz (statik) test sayti:
 
 `index.html` faylini brauzerda (Chrome/Edge) ikki marta bosib oching.
 
+`https://botirweb.github.io/Test/`
+
 ## Savol qo'shish
 
 `questions.js` faylini oching. Har bir test savoli **qaysi fanga** tegishli ekanini
