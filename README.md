@@ -20,7 +20,7 @@ Haqiqiy imtihondagidek ishlaydigan, serversiz (statik) test sayti:
 
 `index.html` faylini brauzerda (Chrome/Edge) ikki marta bosib oching.
 
-https://botirweb.github.io/Test/ [app.botirweb.github.io/Test/]
+https://botirweb.github.io/Test
 
 ## Savol qo'shish
 
