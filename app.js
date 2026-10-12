@@ -9,11 +9,11 @@
   var SUHBAT = Array.isArray(window.SUHBAT_SAVOLLAR) ? window.SUHBAT_SAVOLLAR : [];
   var SOZ = Object.assign({
     testNomi: "Ishga kirish testi",
-    fanlar: [], savollarPerFan: 10, otishBali: 60,
+    fanlar: [], mashqFanlari: [], savollarPerFan: 10, otishBali: 60,
     savollarniAralashtirish: true, variantlarniAralashtirish: false, vaqtniKorsatish: true
   }, window.TEST_SOZLAMALAR || {});
 
-  var FAN_IKON = { "Davlat tili": "🗣️", "Milliy qonunchilik": "⚖️", "IKT": "💻", "Mantiqiy fikrlash": "🧩" };
+  var FAN_IKON = { "Davlat tili": "🗣️", "Milliy qonunchilik": "⚖️", "IKT": "💻", "Mantiqiy fikrlash": "🧩", "Kasbiy ko'nikmalar": "🧰" };
 
   var $ = function (id) { return document.getElementById(id); };
   function lsGet(k, d) { try { var v = localStorage.getItem(k); return v === null ? d : v; } catch (e) { return d; } }
@@ -31,6 +31,10 @@
     Object.keys(bor).forEach(function (f) { if (list.indexOf(f) < 0) list.push(f); });
     if (!list.length && TEST.length) list = ["Test"];
     return list;
+  }
+  // To'liq imtihonga kiradigan fanlar (faqat mashq uchun fanlar chiqarib tashlanadi)
+  function imtihonFanlari() {
+    return fanlar().filter(function (f) { return SOZ.mashqFanlari.indexOf(f) < 0; });
   }
   function fanSavollari(f) { return f === "Test" ? TEST.slice() : TEST.filter(function (q) { return q.fan === f; }); }
 
@@ -62,7 +66,7 @@
     $("home-per-fan").textContent = SOZ.savollarPerFan;
 
     var fl = fanlar(), jami = 0;
-    fl.forEach(function (f) { jami += Math.min(SOZ.savollarPerFan, fanSavollari(f).length); });
+    imtihonFanlari().forEach(function (f) { jami += Math.min(SOZ.savollarPerFan, fanSavollari(f).length); });
     $("home-exam-count").textContent = jami;
     $("btn-exam").disabled = jami === 0;
 
@@ -105,7 +109,7 @@
 
   function imtihonBoshla() {
     var aralash = $("chk-shuffle").checked, list = [];
-    fanlar().forEach(function (f) {
+    imtihonFanlari().forEach(function (f) {
       var pool = fanSavollari(f); if (aralash) shuffle(pool);
       list = list.concat(pool.slice(0, SOZ.savollarPerFan));  // fanlar ketma-ket
     });
